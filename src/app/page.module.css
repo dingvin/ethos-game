@@ -1,0 +1,241 @@
+/* Retro Windows Styling */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: url('/bg.jpg') center/cover no-repeat;
+  font-family: 'MS Sans Serif', Tahoma, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 10px;
+  left: -320px;
+  width: 300px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  padding: 8px;
+  z-index: 1000;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  animation: slideIn 0.5s forwards, slideOut 0.5s forwards 3.5s;
+}
+
+@keyframes slideIn {
+  from { left: -320px; }
+  to { left: 10px; }
+}
+
+@keyframes slideOut {
+  from { left: 10px; }
+  to { left: -320px; }
+}
+
+/* Centered Content */
+.centerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Top Bar */
+.topBar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.topBar button {
+  background: linear-gradient(to bottom, #ece9d8 0%, #d6d3c8 100%);
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  color: black;
+  font-family: 'MS Sans Serif', Tahoma, sans-serif;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* TopBar button shared */
+.topBarButton {
+  background: linear-gradient(to bottom, #ece9d8 0%, #d6d3c8 100%);
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  color: black;
+  font-family: 'MS Sans Serif', Tahoma, sans-serif;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* $AIR Balance */
+.airBalance {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #c0c0c0;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 12px;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+}
+
+/* Main Button */
+.mainBtn {
+  background: linear-gradient(to bottom, #ece9d8 0%, #d6d3c8 100%);
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  color: black;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 200px;
+  text-align: center;
+}
+
+/* Say GM Button */
+.sayGMBtn {
+  background: linear-gradient(to bottom, #ffff00 0%, #c0c000 100%);
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+/* Guide Text */
+.guideText {
+  white-space: nowrap;
+  background: #c0c0c0;
+  padding: 4px 8px;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Windows Styled Components */
+.rewardWindow {
+  position: fixed;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #000 #000 #fff;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.windowHeader {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: white;
+  padding: 8px;
+  font-weight: bold;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.closeBtn {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  color: black;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.closeBtn:active {
+  border-color: #404040 #fff #fff #404040;
+}
+
+/* Message list and input */
+.messageList {
+  background: white;
+  border: 2px solid;
+  border-color: #404040 #fff #fff #404040;
+  margin: 4px;
+  padding: 2px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.messageItem {
+  background: white;
+  padding: 4px;
+  margin-bottom: 2px;
+  border-bottom: 1px dotted #c0c0c0;
+}
+
+.redeemInput {
+  width: 160px;
+  margin: 4px;
+  padding: 4px;
+  border: 2px solid;
+  border-color: #404040 #fff #fff #404040;
+  background: white;
+}
+
+/* Experience Bar */
+.expBar {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  bottom: 50px;
+  width: 24px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.expFill {
+  width: 100%;
+  background: linear-gradient(to bottom, #008000 0%, #00C000 100%);
+  transition: height 0.3s;
+}
+
+.expValue {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #c0c0c0;
+  padding: 2px 4px;
+  border: 2px solid;
+  border-color: #fff #404040 #404040 #fff;
+  font-size: 12px;
+}
+
+/* Floating text */
+.floatingText {
+  position: absolute;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+  font-size: 14px;
+  animation: floatUp 1s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-50px); }
+}
